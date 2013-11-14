@@ -1,0 +1,29 @@
+{
+  "name": "ircd-hybrid",
+  "description": "Installs/Configures ircd-hybrid",
+  "long_description": "",
+  "maintainer": "Tatsuma Murase",
+  "maintainer_email": "",
+  "license": "All rights reserved",
+  "platforms": {
+  },
+  "dependencies": {
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+  },
+  "version": "0.1.0"
+}

@@ -1,0 +1,7 @@
+name             'ircd-hybrid'
+maintainer       'Tatsuma Murase'
+maintainer_email ''
+license          'All rights reserved'
+description      'Installs/Configures ircd-hybrid'
+long_description ''
+version          '0.1.0'
