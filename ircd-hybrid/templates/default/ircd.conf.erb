@@ -5,26 +5,26 @@
  /* serverinfo {}:  Contains information about the server. (OLD M:) */
 serverinfo {
     /* name: the name of our server */
-    name = "<% node[:ircd][:serverinfo][:name] %>";
+    name = "<%= node[:ircd][:serverinfo][:name] %>";
 
     /* description: the description of our server.  '[' and ']' may not
      * be used here for compatibility with older servers.
      */
-    description = "<% node[:ircd][:serverinfo][:description] %>";
+    description = "<%= node[:ircd][:serverinfo][:description] %>";
 
     /* network info: the name and description of the network this server
      * is on.  Shown in the 005 reply and used with serverhiding.
      */
-    network_name = "<% node[:ircd][:serverinfo][:network_name] %>";
-    network_desc = "<% node[:ircd][:serverinfo][:network_desc] %>";
+    network_name = "<%= node[:ircd][:serverinfo][:network_name] %>";
+    network_desc = "<%= node[:ircd][:serverinfo][:network_desc] %>";
 
-    sid = "<% node[:ircd][:serverinfo][:sid] %>";
+    sid = "<%= node[:ircd][:serverinfo][:sid] %>";
 
     /* hub: allow this server to act as a hub and have multiple servers
      * connected to it.  This may not be changed if there are active
      * LazyLink servers.
      */
-    hub = <% node[:ircd][:serverinfo][:hub] %>;
+    hub = <%= node[:ircd][:serverinfo][:hub] %>;
 
     /* vhost: the IP to bind to when we connect outward to ipv4 servers.
      * This should be an ipv4 IP only.
@@ -37,14 +37,14 @@ serverinfo {
     #vhost6 = "3ffe:80e8:546::2";
 
     /* max clients: the maximum number of clients allowed to connect */
-    max_clients = <% node[:ircd][:serverinfo][:max_clients] %>;
+    max_clients = <%= node[:ircd][:serverinfo][:max_clients] %>;
 };
 
 /* admin {}: contains admin information about the server. (OLD A:) */
 admin {
-    name = "<% node[:ircd][:admin][:name] %>";
-    description = "<% node[:ircd][:admin][:description] %>";
-    email = "<% node[:ircd][:admin][:email] %>";
+    name = "<%= node[:ircd][:admin][:name] %>";
+    description = "<%= node[:ircd][:admin][:description] %>";
+    email = "<%= node[:ircd][:admin][:email] %>";
 };
 
 /*
@@ -70,7 +70,7 @@ log {
      * once the server is running via /quote SET LOG.  Either:
      * L_CRIT, L_ERROR, L_WARN, L_NOTICE, L_TRACE, L_INFO or L_DEBUG
      */
-    log_level = <% node[:ircd][:log][:log_level] %>;
+    log_level = <%= node[:ircd][:log][:log_level] %>;
 };
 
 /* class {}: contain information about classes for users (OLD Y:) */
@@ -136,8 +136,8 @@ listen {
      */
 
     /* port: listen on all available IPs, ports 6665 to 6669 */
-    host = "<% node[:ircd][:listen][:host] %>";
-    port = <% node[:ircd][:listen][:port] %>;
+    host = "<%= node[:ircd][:listen][:host] %>";
+    port = <%= node[:ircd][:listen][:port] %>;
 };
 
 /* auth {}: allow users to connect to the ircd (OLD I:) */
@@ -219,7 +219,7 @@ operator {
      *
      * MD5 is supported. If you want to use it, use mkpasswd -Hmd5.
      */
-    password = "<% node[:ircd][:operator][:password] %>";
+    password = "<%= node[:ircd][:operator][:password] %>";
     #password = "$1$9PTzrFkW$yh3ablZ5DnHeU9yjhj..U/";
 
     /* class: the class the oper joins when they successfully /oper */
