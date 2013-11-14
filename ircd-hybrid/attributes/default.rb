@@ -17,3 +17,5 @@ default[:ircd][:admin][:description] = "Main Server Administrator"
 default[:ircd][:admin][:email] = "root@localhost"
 
 default[:ircd][:log][:log_level] = "L_INFO"
+
+default[:ircd][:class][:users][:number_per_ip] = 100

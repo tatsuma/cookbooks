@@ -84,7 +84,7 @@ class {
     ping_time = 2 minutes;
 
     /* number per ip: the number of users per host allowed to connect */
-    number_per_ip = 2;
+    number_per_ip = <%= node[:ircd][:class][:users][:number_per_ip] %>;
 
     /* max number: the maximum number of users allowed in this class */
     max_number = 100;
